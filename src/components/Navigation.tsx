@@ -26,7 +26,7 @@ export default function Navigation() {
 
       return () => clearTimeout(timeout);
     }
-  }, [isRouting]);
+  },[isRouting]);
 
   return (
     <div

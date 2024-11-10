@@ -17,7 +17,7 @@ export default function Home() {
             </span>
           </h1>
           <p className="text-gray-300 hidden md:block">
-          Hi, I'm Rabeeka Yousuf Khan!
+          Hi, I am Rabeeka Yousuf Khan!
           I am a passionate and detail-oriented web developer with expertise in designing, developing, and maintaining responsive websites and web applications. With a strong foundation in modern web technologies like HTML, CSS, JavaScript, and frameworks such as React and Angular, I specialize in creating user-friendly, visually appealing, and performance-optimized solutions.
           </p>
           <div className="flex-col md:flex-row hidden md:flex gap-5">
