@@ -1,101 +1,98 @@
 import Image from "next/image";
+import Link from "next/link";
 
 export default function Home() {
   return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="https://nextjs.org/icons/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-semibold">
-              src/app/page.tsx
-            </code>
-            .
-          </li>
-          <li>Save and see your changes instantly.</li>
-        </ol>
-
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="https://nextjs.org/icons/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:min-w-44"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
+    <main className="w-screen h-screen relative">
+      <div
+        className="flex items-center w-full h-full bg-cover bg-center overflow-scroll"
+        style={{ backgroundImage: "url(/main-bg.webp)" }}
+      >
+        <div className="pl-10 md:pl-40 pb-56 md:pb-20 flex flex-col gap-5 z-[10] max-w-[750px] ">
+          <h1 className="text-[30px] md:text-[50px] text-white font-semibold">
+            Make Anything possible with
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-500 to-red-500">
+              {" "}
+              Web development
+            </span>
+          </h1>
+          <p className="text-gray-300 hidden md:block">
+          Hi, I'm Rabeeka Yousuf Khan!
+          I am a passionate and detail-oriented web developer with expertise in designing, developing, and maintaining responsive websites and web applications. With a strong foundation in modern web technologies like HTML, CSS, JavaScript, and frameworks such as React and Angular, I specialize in creating user-friendly, visually appealing, and performance-optimized solutions.
+          </p>
+          <div className="flex-col md:flex-row hidden md:flex gap-5">
+            <Link
+              href="/skills"
+              className="rounded-[20px] relative bg-blue-500 hover:bg-blue-400  px-5 py-3 text-lg text-white max-w-[200px]"
+            >
+              Learn more
+            </Link>
+            <Link
+              href="/projects"
+              className="rounded-[20px] hover:bg-blue-400  px-5 py-3 text-lg text-white max-w-[200px] border"
+            >
+              My Projects
+            </Link>
+            <Link
+              href="/contact"
+              className="rounded-[20px] hover:bg-blue-400  px-5 py-3 text-lg text-white max-w-[200px] border"
+            >
+              Contact Me
+            </Link>
+          </div>
         </div>
-      </main>
-      <footer className="row-start-3 flex gap-6 flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
+      </div>
+
+      <div className="flex absolute bottom-20 z-[20] right-4 flex-col md:hidden gap-4">
+        <Link
+          href="/skills"
+          className="rounded-[20px] bg-blue-500 hover:bg-blue-400  px-[10px] text-center py-2 text-md text-white w-[120px]"
         >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
+          Learn more
+        </Link>
+        <Link
+          href="/projects"
+          className="rounded-[20px] bg-blue-500 hover:bg-blue-400  px-[10px] text-center py-2 text-md text-white w-[120px]"
         >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
+          My Projects
+        </Link>
+        <Link
+          href="/contact"
+          className="rounded-[20px] bg-blue-500 hover:bg-blue-400  px-[10px] text-center py-2 text-md text-white w-[120px]"
         >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
-    </div>
+          Contact Me
+        </Link>
+      </div>
+
+      <div className="absolute bottom-0 right-0 z-[10]">
+        <Image
+          src="/horse.png"
+          alt="horse"
+          width={300}
+          height={300}
+          className="absolute right-55 top-40"
+        />
+
+        <Image src="/cliff.webp" alt="cliff" height={480} width={480} />
+      </div>
+
+      <div className="absolute w-full h-auto bottom-0 z-[5]">
+        <Image
+          src="/trees.webp"
+          alt="trees"
+          height={2000}
+          width={2000}
+          className="h-full w-full"
+        />
+      </div>
+
+      <Image
+        src="/stars.png"
+        alt="horse"
+        width={300}
+        height={300}
+        className="absolute left-0 top-10 z-[10]"
+      />
+    </main>
   );
 }
